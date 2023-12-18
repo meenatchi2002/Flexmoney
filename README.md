@@ -112,3 +112,27 @@ app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
 
+//ENTITY-RELATIONSHIP DIAGRAM
+User
+- UserID (Primary Key)
+- Name
+- Age
+- EnrollmentDate
+
+Batch
+- BatchID (Primary Key)
+- BatchName
+- StartTime
+- EndTime
+
+Enrollment
+- EnrollmentID (Primary Key)
+- UserID (Foreign Key referencing User)
+- BatchID (Foreign Key referencing Batch)
+
+
+In this ER diagram:
+
+- The "User" entity represents individuals enrolling in yoga classes, with attributes such as UserID, Name, Age, and EnrollmentDate.
+- The "Batch" entity represents the different batches available for yoga classes, with attributes including BatchID, BatchName, StartTime, and EndTime.
+- The "Enrollment" relationship table connects users to batches, with EnrollmentID as the primary key and UserID and BatchID as foreign keys referencing the respective entities.
